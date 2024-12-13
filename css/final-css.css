@@ -1,0 +1,382 @@
+/* padronização dos espaços */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* padronização da biblioteca de estilos */
+
+:root {
+    --background-color-primary-light: #e0e0e0;
+    --background-color-secondary-light: #ffffff;
+    --background-color-Tertiary-light: #8a8a8a;
+    --main-color: #6c63ff;
+    --main-color-hover: #a19cfa;
+    --background-color-primary-dark: #2c2c2e;
+    --background-color-secondary-dark: #070707;
+    --text-shadow: 2px 2px 5px rgba(0, 0, 0);
+    --image-shadow: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+    --buttom-shadow: 1px 5px 4px rgb(0, 0, 0);
+    --button-shadow-light: 0px 2px 7px rgb(0, 0, 0);
+    --soft-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --size-50: .5rem;
+    --size-100: 1rem;
+    --size-150: 1.5rem;
+    --size-200: 2rem;
+    --size-300: 3rem;
+    --size-400: 4rem;
+    --size-500: 5rem;
+}
+
+/* criando um padrão para toda a pagina */
+
+body {
+    background-color: var(--background-color-primary-light);
+    color: var(--background-color-secondary-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* estilização e posicionamento do banner */
+
+.hero-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -10;
+    display: block;
+}
+
+/* criei uma camada a mais para colocar a sombra sem usar a imagem de fundo */
+
+.image-background {
+    height: 100vh;
+    width: 100%;
+    z-index: 9;
+    background: var(--image-shadow);
+    position: absolute;
+}
+
+/* defindo posicionamento da section */
+
+.hero-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-200);
+    height: 100vh;
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    z-index: 10;
+}
+
+/* estilização da section */
+
+.hero-content h1 {
+    color: var(--background-color-secondary-light);
+    font-size: var(--size-200);
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+.hero-content p {
+    color: var(--background-color-secondary-light);
+    font-weight: 400;
+    margin-top: var(--size-50);
+    margin-left: var(--size-100);
+    margin-right: var(--size-100);
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+/* estilização do botão do banner */
+
+.btn {
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: var(--size-50);
+    box-shadow: var(--buttom-shadow);
+    color: var(--background-color-secondary-light);
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-align: center;
+    text-decoration: none;
+    padding: var(--size-50) var(--size-100);
+}
+
+.btn:hover {
+    background-color: var(--main-color-hover);
+    color: var(--background-color-secondary-dark);
+    transition: background-color 0.3s ease;
+} 
+
+/* posicionamento da section dos apresentadores */
+
+.speakers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--size-100);
+    margin-top: var(--size-100);
+    text-align: center;
+}
+
+.speakers h2 {
+    padding: var(--size-200);
+}
+
+/* grid da section dos apresentadores */
+
+.speakers-grid {
+    display: grid;
+    gap: var(--size-100);
+    width: 90%;
+}
+
+/* estilização dos cards dos apresentadores */
+
+.speaker-card {
+    background-color: var(--background-color-secondary-light);
+    padding: var(--size-100);
+    border-radius: var(--size-50);
+    box-shadow: var(--soft-shadow);
+}
+
+.speaker-card:hover {
+    cursor: pointer;
+    background-color: var(--background-color-Tertiary-light);
+    transition: background-color 0.4s ease;
+}
+
+.speaker-card img, h3, p {
+    color: var(--background-color-secondary-dark);
+    margin-bottom: var(--size-100);
+}
+
+.speakers img {
+    border-radius: var(--size-500);
+}
+
+/* posicionamento dos horarios */
+
+.schedule {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--size-300);
+    margin: 0rem 1rem 0rem 1rem;
+    margin-top: var(--size-300);
+}
+
+/* grid dos horarios */
+
+.schedule-grid {
+    display: grid;
+    align-items: center;
+    gap: var(--size-100);
+    width: 90%;
+}
+
+/* estilização dos itens grid */
+
+.schedule-item {
+    background-color: var(--background-color-secondary-light);
+    border-radius: var(--size-50);
+    color: var(--background-color-secondary-dark);
+    padding: var(--size-100);
+    box-shadow: var(--soft-shadow);
+}
+
+/* posicionamento da imagem da carta */
+
+.newsletter-image img {
+    width: 100%;
+    object-fit: cover;
+    padding: var(--size-400);
+}
+
+/* posicionamento da section */
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+/* posicionamento de todo o container do formulario */
+
+.newsletter-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-100);
+    margin: var(--size-50) var(--size-100);
+}
+
+.newsletter-text p {
+    color: var(--background-color-Tertiary-light);
+    line-height: var(--size-150);
+}
+
+/* estilização do formulario */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-50);
+}
+
+.form-group input {
+    padding: var(--size-50);
+    border-radius: var(--size-50);
+    border: solid 1px var(--background-color-Tertiary-light);
+    margin-bottom: var(--size-100);
+}
+
+/* estilização do botão do formulario */
+
+.newsletter-form .btn {
+    box-shadow: var(--button-shadow-light);
+    border-style: none;
+    font-weight: 600;
+}
+
+.newsletter-form .btn:hover {
+    cursor: pointer;
+}
+
+/* estilização do rodapé */
+
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--size-300);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--background-color-primary-dark);
+    font-size: 12px;
+    margin: var(--size-50) var(--size-100);
+}
+
+.footer .btn {
+    box-shadow: var(--button-shadow-light);
+    margin: var(--size-100);
+    width: fit-content;
+    padding: var(--size-50) var(--size-100);
+}
+
+/* ponto de quebra para versão desktop*/
+
+@media screen and (min-width: 768px) {
+
+    /* uma pequena estilização para garantir o tamanho dos cards */
+
+    .speaker-card {
+        padding: var(--size-100);
+    }
+
+    /* posicionamento do grid, definindo o grid desktop */
+
+    .speakers-grid {
+        display: grid;
+        gap: var(--size-100);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 90%;
+    }
+
+    /* uma pequena estilização para garantir o tamanho dos horarios */
+
+    .schedule-item {
+        padding: var(--size-100) var(--size-200);
+    }
+
+    /* posicionamento do grid, definindo o grid desktop horarios */
+
+    .schedule-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    /* posicionamento do do grid form junto com a imagem */
+
+    .newsletter-grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: var(--size-300);
+        text-align: justify;
+    }
+
+    /* ajustando tamanho da imagem */
+
+    .newsletter-image img {
+        height: auto;
+        width: 25rem;
+        rotate: -10deg;
+    }
+
+    /* posicionamento do form */
+
+    .newsletter-text {
+        height: auto;
+        width: 25rem;
+    }
+
+    /* adicionando uma largura para todo o container */
+
+    .newsletter {
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    /* cor de fundo do tema escuro */
+
+    body {
+        background-color: var(--background-color-primary-dark);
+        color: var(--background-color-secondary-light);
+    }
+
+    /* cor dos cards no tema escuro */
+
+    .speaker-card {
+        background-color: var(--background-color-secondary-dark);
+        box-shadow: var(--soft-shadow);
+    }
+
+    .speaker-card:hover {
+        cursor: pointer;
+        background-color: var(--background-color-Tertiary-light);
+        transition: background-color 0.4s ease;
+    }    
+
+    .speaker-card img, h3, p {
+        color: var(--background-color-secondary-light);
+    }
+
+    /* cor dos horarios no tema escuro */
+
+    .schedule-item {
+        background-color: var(--background-color-secondary-dark);
+        box-shadow: var(--soft-shadow);
+    }
+
+    .form-group input {
+        background-color: var(--background-color-secondary-dark);
+    }
+
+    .footer p {
+        color: var(--background-color-secondary-light);
+    }
+}
